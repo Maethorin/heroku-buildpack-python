@@ -50,11 +50,9 @@ BUILDPACK_VERSION=v28
 # Setup pip-pop (pip-diff)
 export PATH=$PATH:$ROOT_DIR/vendor/pip-pop
 
-export ORACLE_HOME=(cat "${ENV_DIR}/ORACLE_HOME")
-export LD_LIBRARY_PATH=(cat "${ENV_DIR}/LD_LIBRARY_PATH")
-export TNS_ADMIN=(cat "${ENV_DIR}/TNS_ADMIN")
-
-cat "${ENV_DIR}/ORACLE_HOME"
+export ORACLE_HOME=$(cat "${ENV_DIR}/ORACLE_HOME")
+export LD_LIBRARY_PATH=$(cat "${ENV_DIR}/LD_LIBRARY_PATH")
+export TNS_ADMIN=$(cat "${ENV_DIR}/TNS_ADMIN")
 
 #if [ -f $ENV_DIR/ORACLE_HOME ]; then
 #fi
