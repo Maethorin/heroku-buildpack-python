@@ -54,9 +54,8 @@ export ORACLE_HOME=(cat "${ENV_DIR}/ORACLE_HOME")
 export LD_LIBRARY_PATH=(cat "${ENV_DIR}/LD_LIBRARY_PATH")
 export TNS_ADMIN=(cat "${ENV_DIR}/TNS_ADMIN")
 
-echo $ORACLE_HOME
-echo $LD_LIBRARY_PATH
-echo $TNS_ADMIN
+cat "${ENV_DIR}/ORACLE_HOME"
+
 #if [ -f $ENV_DIR/ORACLE_HOME ]; then
 #fi
 
