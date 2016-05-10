@@ -50,6 +50,18 @@ BUILDPACK_VERSION=v28
 # Setup pip-pop (pip-diff)
 export PATH=$PATH:$ROOT_DIR/vendor/pip-pop
 
+if [ -f $ENV_DIR/ORACLE_HOME ]; then
+    export ORACLE_HOME=(cat $ENV_DIR/ORACLE_HOME)
+fi
+
+if [ -f $ENV_DIR/LD_LIBRARY_PATH ]; then
+    export LD_LIBRARY_PATH=(cat $ENV_DIR/LD_LIBRARY_PATH)
+fi
+
+if [ -f $ENV_DIR/TNS_ADMIN ]; then
+    export TNS_ADMIN=(cat $ENV_DIR/TNS_ADMIN)
+fi
+
 # Support Anvil Build_IDs
 [ ! "$SLUG_ID" ] && SLUG_ID="defaultslug"
 [ ! "$REQUEST_ID" ] && REQUEST_ID=$SLUG_ID
