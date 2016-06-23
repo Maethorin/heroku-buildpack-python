@@ -212,7 +212,6 @@ source $BIN_DIR/steps/pylibmc
 
 # Libffi support.
 source $BIN_DIR/steps/cryptography
-source $BIN_DIR/steps/libffi
 
 # Support for Geo libraries.
 sub-env $BIN_DIR/steps/geo-libs
@@ -232,7 +231,7 @@ set-env PATH '$HOME/.heroku/python/bin:$PATH'
 set-env PYTHONUNBUFFERED true
 set-env PYTHONHOME /app/.heroku/python
 set-env LIBRARY_PATH '/app/.heroku/vendor/lib:/app/.heroku/python/lib:$LIBRARY_PATH'
-set-env LD_LIBRARY_PATH '/app/.heroku/vendor/lib:/app/.heroku/python/lib:/app/vendor/libffi-3.0/lib:$LD_LIBRARY_PATH'
+set-env LD_LIBRARY_PATH '/app/.heroku/vendor/lib:/app/.heroku/python/lib:$LD_LIBRARY_PATH'
 set-default-env LANG en_US.UTF-8
 set-default-env PYTHONHASHSEED random
 set-default-env PYTHONPATH /app/
